@@ -552,7 +552,7 @@ msgstr "用紙のサイズ"
 #. orientation
 #: ../app/diapagelayout.c:184
 msgid "Orientation"
-msgstr "向き"
+msgstr "方向"
 
 #. margins
 #: ../app/diapagelayout.c:213
@@ -769,9 +769,45 @@ msgstr "すべて選択"
 msgid "Select None"
 msgstr "選択の解除"
 
+#: ../app/exit_dialog.c:202
+msgid "If you don’t save, all your changes will be permanently lost."
+msgstr "保存しなければ、変更は完全に失われます."
+
+#: ../app/exit_dialog.c:205
+msgid "Close _without Saving"
+msgstr "保存せずに閉じる"
+
+#: ../app/exit_dialog.c:210
+msgid "_Cancel"
+msgstr "取消"
+
+#: ../app/exit_dialog.c:221
+msgid "_Save"
+msgstr "保存"
+
 #: ../app/exit_dialog.c:236
 msgid "Nothing selected for saving.  Would you like to try again?"
 msgstr "保存するダイアグラムを選択していませんが、選択し直しますか?"
+
+#: ../app/exit_dialog.c:283
+msgid "S_elect the diagrams you want to save:"
+msgstr "選択したダイアグラムを保存する:"
+
+#: ../app/exit_dialog.c:356
+msgid "Save changes to diagram “%s” before closing?"
+msgstr "ダイアグラム“%s”を閉じる前に保存しますか?"
+
+#: ../app/exit_dialog.c:360
+msgid "There is %d diagram with unsaved changes. "
+msgstr "未保存のダイアグラムが %d 個あります."
+
+#: ../app/exit_dialog.c:361
+msgid "Save changes before closing?"
+msgstr "閉じる前に保存しますか?"
+
+#: ../app/exit_dialog.c:362
+msgid "There are %d diagrams with unsaved changes. "
+msgstr "未保存のダイアグラムが %d 個あります."
 
 #: ../app/filedlg.c:144 ../app/filedlg.c:152 ../app/filedlg.c:168
 #: ../app/filedlg.c:819 ../lib/widgets.c:406
@@ -1122,7 +1158,7 @@ msgstr "空のダイアグラムを生成しない"
 
 #: ../app/menus.c:82
 msgid "_Open…"
-msgstr ""
+msgstr "開く(O)..."
 
 #: ../app/menus.c:82
 #, fuzzy
@@ -1166,11 +1202,11 @@ msgstr "ダイアグラムの保存"
 
 #: ../app/menus.c:111
 msgid "Save _As…"
-msgstr ""
+msgstr "名前を付けて保存(A)..."
 
 #: ../app/menus.c:111
 msgid "Save the diagram with a new name"
-msgstr ""
+msgstr "ダイアグラムを名前を付けて保存"
 
 #: ../app/menus.c:112
 msgid "_Export…"
@@ -1483,7 +1519,7 @@ msgstr "次で選択"
 #. For placment of the toplevel Layout menu and it's accelerator
 #: ../app/menus.c:215
 msgid "L_ayout"
-msgstr ""
+msgstr "レイアウト(L)"
 
 #: ../app/menus.c:217
 msgid "_Input Methods"
@@ -2795,7 +2831,7 @@ msgstr "線の色"
 
 #: ../lib/properties.c:96 ../lib/properties.h:634 ../lib/properties.h:637
 msgid "Line style"
-msgstr "線のスタイル"
+msgstr "線種"
 
 #: ../lib/properties.c:97 ../lib/properties.h:653 ../lib/properties.h:656
 msgid "Fill color"
@@ -3371,6 +3407,18 @@ msgstr "コメントを表示する"
 msgid "Name:"
 msgstr "名前:"
 
+#: ../objects/UML/class_attributes_dialog.c:675
+msgid "Attribute Name:"
+msgstr "属性名:"
+
+#: ../objects/UML/class_operations_dialog.c:888
+msgid "Method Name:"
+msgstr "メソッド名:"
+
+#: ../objects/UML/class_operations_dialog.c:1289
+msgid "Parameter Name:"
+msgstr "パラメーター名:"
+
 #: ../objects/ER/attribute.c:155
 msgid "Key:"
 msgstr "キー:"
@@ -3473,7 +3521,12 @@ msgstr "シグナル"
 #: ../objects/UML/class_operations_dialog.c:988
 #: ../objects/UML/class_templates_dialog.c:447
 msgid "Type:"
-msgstr "種類:"
+msgstr "型:"
+
+#: ../objects/UML/class_operations_dialog.c:788
+msgid "Return Type:"
+msgstr "戻り値の型:"
+
 
 #: ../objects/FS/fs.c:43
 msgid "Function structure diagram objects"
@@ -4652,7 +4705,7 @@ msgstr "エージェント"
 
 #: ../objects/Istar/actor.c:69 ../objects/UML/association.c:250
 msgid "Role"
-msgstr "役割"
+msgstr "ロール"
 
 #: ../objects/Istar/goal.c:74 ../objects/KAOS/goal.c:77
 msgid "Softgoal"
@@ -5207,19 +5260,19 @@ msgstr "BからAへ"
 
 #: ../objects/UML/association.c:228
 msgid "Aggregation"
-msgstr "アグリゲーション"
+msgstr "集約（アグリゲーション）"
 
 #: ../objects/UML/association.c:229
 msgid "Composition"
-msgstr "コンポジション"
+msgstr "合成（コンポジション）"
 
 #: ../objects/UML/association.c:239
 msgid "Direction"
-msgstr "向き"
+msgstr "方向"
 
 #: ../objects/UML/association.c:241
 msgid "Show direction"
-msgstr "向きを表示する"
+msgstr "方向を表示"
 
 #: ../objects/UML/association.c:241
 msgid "Show the small arrow denoting the reading direction"
@@ -5231,7 +5284,7 @@ msgstr "A側"
 
 #: ../objects/UML/association.c:252
 msgid "Multiplicity"
-msgstr "多様性"
+msgstr "多重度"
 
 #: ../objects/UML/association.c:254 ../objects/UML/umlattribute.c:45
 #: ../objects/UML/umloperation.c:71
@@ -5269,27 +5322,27 @@ msgstr "コメント:"
 #: ../objects/UML/class_attributes_dialog.c:572
 #: ../objects/UML/class_operations_dialog.c:811
 msgid "Visibility:"
-msgstr "公開/非公開:"
+msgstr "アクセス修飾子:"
 
 #: ../objects/UML/class_attributes_dialog.c:577
 #: ../objects/UML/class_operations_dialog.c:816 ../objects/UML/uml.c:103
 msgid "Public"
-msgstr "パブリック"
+msgstr "public"
 
 #: ../objects/UML/class_attributes_dialog.c:578
 #: ../objects/UML/class_operations_dialog.c:817 ../objects/UML/uml.c:104
 msgid "Private"
-msgstr "プライベート"
+msgstr "private"
 
 #: ../objects/UML/class_attributes_dialog.c:579
 #: ../objects/UML/class_operations_dialog.c:818 ../objects/UML/uml.c:105
 msgid "Protected"
-msgstr "プロテクテッド"
+msgstr "protected"
 
 #: ../objects/UML/class_attributes_dialog.c:580
 #: ../objects/UML/class_operations_dialog.c:819 ../objects/UML/uml.c:106
 msgid "Implementation"
-msgstr "インプリメンテーション"
+msgstr "なし"
 
 #. end: Inheritance type
 #: ../objects/UML/class_attributes_dialog.c:592
@@ -5315,7 +5368,7 @@ msgstr "ステレオタイプ"
 #: ../objects/UML/class_dialog.c:359 ../objects/UML/class_dialog.c:471
 #: ../objects/UML/class_operations_dialog.c:832 ../objects/UML/uml.c:111
 msgid "Abstract"
-msgstr "抽象化"
+msgstr "抽象"
 
 #: ../objects/UML/class.c:151
 msgid "Visible Attributes"
@@ -5323,11 +5376,11 @@ msgstr "属性を表示する"
 
 #: ../objects/UML/class.c:153
 msgid "Visible Operations"
-msgstr "操作の表示"
+msgstr "操作を表示する"
 
 #: ../objects/UML/class.c:155 ../objects/UML/class_dialog.c:384
 msgid "Wrap Operations"
-msgstr "オペレーションをラップする"
+msgstr "操作をラップする"
 
 #: ../objects/UML/class.c:157
 msgid "Visible Comments"
@@ -5349,7 +5402,7 @@ msgstr "属性を抑制する"
 
 #: ../objects/UML/class.c:169
 msgid "Suppress Operations"
-msgstr "オペレーションを抑制する"
+msgstr "操作を抑制する"
 
 #: ../objects/UML/class.c:171
 msgid "Wrap after char"
@@ -5362,7 +5415,7 @@ msgstr "コメント行の長さ"
 #. umlattribute_extra
 #: ../objects/UML/class.c:186
 msgid "Operations"
-msgstr "オペレーション"
+msgstr "操作"
 
 #. umloperations_extra
 #: ../objects/UML/class.c:190
@@ -5379,7 +5432,7 @@ msgstr "クラス名"
 
 #: ../objects/UML/class.c:209
 msgid "Abstract Class Name"
-msgstr "抽象化クラス名"
+msgstr "抽象クラス名"
 
 #. Class page:
 #: ../objects/UML/class_dialog.c:320
@@ -5403,11 +5456,11 @@ msgstr "属性を表示する"
 
 #: ../objects/UML/class_dialog.c:374
 msgid "Operations visible"
-msgstr "オペレーションを表示する"
+msgstr "操作を表示する"
 
 #: ../objects/UML/class_dialog.c:377
 msgid "Suppress operations"
-msgstr "オペレーションを抑制する"
+msgstr "操作を抑制する"
 
 #: ../objects/UML/class_dialog.c:391
 msgid "Wrap after this length: "
@@ -5441,12 +5494,12 @@ msgstr "サイズ"
 
 #: ../objects/UML/class_dialog.c:481
 msgid "Abstract Class"
-msgstr "抽象化クラス"
+msgstr "抽象クラス"
 
 #. should probably be refactored too.
 #: ../objects/UML/class_dialog.c:498
 msgid "Line Width"
-msgstr "線の幅"
+msgstr "線幅"
 
 #: ../objects/UML/class_dialog.c:507
 msgid "Text Color"
@@ -5525,11 +5578,11 @@ msgstr "入力と出力"
 #. Operations page:
 #: ../objects/UML/class_operations_dialog.c:1069
 msgid "_Operations"
-msgstr "オペレーション(_O)"
+msgstr "操作(_O)"
 
 #: ../objects/UML/class_operations_dialog.c:1124
 msgid "Operation data"
-msgstr "オペレーションのデータ"
+msgstr "操作のデータ"
 
 #. Templates page:
 #: ../objects/UML/class_templates_dialog.c:368
@@ -5608,7 +5661,7 @@ msgstr "UML ライフライン"
 
 #: ../objects/UML/message.c:136
 msgid "Call"
-msgstr "呼び出し"
+msgstr "同期呼び出し"
 
 #: ../objects/UML/message.c:137
 msgid "Create"
@@ -5620,7 +5673,7 @@ msgstr "破棄"
 
 #: ../objects/UML/message.c:139
 msgid "Simple"
-msgstr "シンプル"
+msgstr "非同期呼び出し"
 
 #: ../objects/UML/message.c:140
 msgid "Return"
@@ -5730,7 +5783,7 @@ msgstr ""
 
 #: ../objects/UML/umloperation.c:77
 msgid "Scope"
-msgstr ""
+msgstr "スコープ"
 
 #: ../objects/UML/umloperation.c:77
 #, fuzzy
@@ -6360,7 +6413,7 @@ msgstr "Dia では三点鎖線をサポートしていません (二重鎖線を
 #, fuzzy, c-format
 #| msgid "Line style %d should not appear\n"
 msgid "Line style %d should not appear"
-msgstr "線スタイル %d は利用できません\n"
+msgstr "線種 %d は利用できません"
 
 #: ../plug-ins/xfig/xfig-import.c:244
 #, fuzzy, c-format
@@ -10244,19 +10297,19 @@ msgstr "注意"
 
 #: ../sheets/UML.sheet.in.h:7
 msgid "Realizes, implements a specific interface"
-msgstr "特定のインターフェースの具現化と実装"
+msgstr "インタフェースの実装"
 
 #: ../sheets/UML.sheet.in.h:8
 msgid "Generalization, class inheritance"
-msgstr "クラス派生の一般論"
+msgstr "クラスの継承"
 
 #: ../sheets/UML.sheet.in.h:9
 msgid "Association, two classes are associated"
-msgstr "アソシエーション"
+msgstr "関連（アソシエーション）"
 
 #: ../sheets/UML.sheet.in.h:10
 msgid "Aggregation, one class is part of another"
-msgstr "アグリゲーション"
+msgstr "集約（アグリゲーション）"
 
 #: ../sheets/UML.sheet.in.h:11
 msgid "Implements, class implements a specific interface"

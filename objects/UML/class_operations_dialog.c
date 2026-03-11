@@ -877,7 +877,7 @@ operations_data_create_hbox (UMLClass *umlclass)
   gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
   gtk_box_pack_start (GTK_BOX (vbox2), grid, FALSE, FALSE, 0);
 
-  label = gtk_label_new (_("Name:"));
+  label = gtk_label_new (_("Method Name:"));
   entry = gtk_entry_new ();
   prop_dialog->op_name = GTK_ENTRY (entry);
   g_signal_connect (entry,
@@ -889,7 +889,7 @@ operations_data_create_hbox (UMLClass *umlclass)
   gtk_grid_attach (GTK_GRID (grid), entry, 1, 0, 1, 1);
   gtk_widget_set_hexpand (entry, TRUE);
 
-  label = gtk_label_new (_("Type:"));
+  label = gtk_label_new (_("Return Type:"));
   entry = gtk_entry_new ();
   prop_dialog->op_type = GTK_ENTRY (entry);
   g_signal_connect (entry,
@@ -1286,7 +1286,7 @@ operations_parameters_data_create_vbox (UMLClass *umlclass)
   gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
   gtk_box_pack_start (GTK_BOX (vbox3), grid, FALSE, FALSE, 0);
 
-  label = gtk_label_new (_("Name:"));
+  label = gtk_label_new (_("Parameter Name:"));
   entry = gtk_entry_new ();
   prop_dialog->param_name = GTK_ENTRY (entry);
   g_signal_connect (entry,

@@ -888,7 +888,18 @@ EXPORTS
  libdia_init
  dia_log_message
 
+ dia_marshal_VOID__BOXED_BOXED
+ dia_marshal_VOID__BOXED_BOXEDv
+ dia_marshal_VOID__OBJECT_OBJECT
+ dia_marshal_VOID__OBJECT_OBJECTv
  dia_marshal_VOID__OBJECT_UINT_POINTER
+ dia_marshal_VOID__OBJECT_UINT_POINTERv
+ dia_marshal_VOID__POINTER_POINTER
+ dia_marshal_VOID__POINTER_POINTERv
+ dia_marshal_VOID__STRING_FLAGS
+ dia_marshal_VOID__STRING_FLAGSv
+ dia_marshal_VOID__UINT_UINT_UINT
+ dia_marshal_VOID__UINT_UINT_UINTv
 
  dia_matrix_is_identity
  dia_matrix_get_angle_and_scales

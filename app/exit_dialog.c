@@ -353,7 +353,7 @@ dia_exit_dialog_add_item (DiaExitDialog *self,
   n = gtk_tree_model_iter_n_children (GTK_TREE_MODEL (priv->file_store), NULL);
 
   if (n == 1) {
-    title = g_markup_printf_escaped ("Save changes to diagram “%s” before closing?",
+    title = g_markup_printf_escaped (_("Save changes to diagram “%s” before closing?"),
                                      name);
     gtk_widget_hide (priv->file_box);
   } else {

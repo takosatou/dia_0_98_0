@@ -1,3 +1,53 @@
+# Dia 0.89.0 Windows版
+
+## 開発環境
+MSYS2 + MINGW64 を用います。
+https://www.msys2.org/ からダウンロードしてインストールします。
+
+次に開発ツールをインストールします。
+
+```bash
+$ pacman -Syuu
+$ pacman -S base-devel
+$ pacman -S msys2-devel
+$ pacman -S mingw-w64-x86_64-python
+$ pacman -S mingw-w64-x86_64-python-pip
+$ pacman -S mingw-w64-x86_64-toolchain
+$ pacman -S mingw-w64-x86_64-gtk3
+$ pacman -S mingw-w64-x86_64-desktop-file-utils
+$ pacman -S mingw-w64-x86_64-gettext-tools
+$ pacman -S mingw-w64-x86_64-gettext-tools
+$ pacman -S mingw-w64-x86_64-meson
+$ pacman -S mingw-w64-x86_64-ninja
+$ pacman -S mingw-w64-x86_64-cmake
+```
+
+## ビルド
+
+```bash
+cd path/to/dia # ソースコードに移動
+
+meson build -Dprefix=`pwd`/build/install
+cd build
+ninja install
+```
+
+## パッケージ
+
+`build/install/{bin,lib,share,include}` 内容をそのままZIPしてください。
+
+実行ファイルは`bin/dia.exe`です。
+
+## 動作しないとき
+`/c/msys64/mingw/bin/`のDLLの他に、`/c/msys64/mingw64/lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll` も使います。
+
+ファイルを開く／保存するダイアログが開かずに終了する場合には、
+`/c/msys64/mingw64/share/glib-2.0/schemas/` を `build/install/share/glib-2.0/schemas/` としてコピーされているか確認してください。
+
+これらはビルドの最後に `build-aux/windows-bundler.sh`でコピーされるはずのものです。
+
+以下はオリジナルのREADME.md
+---
 # Dia
 
 ![logo](logo.png)

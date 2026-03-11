@@ -672,7 +672,7 @@ _attributes_create_page (GtkNotebook *notebook, UMLClass *umlclass)
   gtk_box_pack_start (GTK_BOX (vbox2), grid, FALSE, FALSE, 0);
   gtk_widget_show (grid);
 
-  label = gtk_label_new (_("Name:"));
+  label = gtk_label_new (_("Attribute Name:"));
   entry = gtk_entry_new ();
   prop_dialog->attr_name = GTK_ENTRY (entry);
   g_signal_connect (G_OBJECT (entry),
