@@ -195,10 +195,10 @@ summary(
   section: 'Features',
 )
 
-gnome.post_install(
-  gtk_update_icon_cache: true,
-  update_desktop_database: true,
-)
+# gnome.post_install(
+#  gtk_update_icon_cache: true,
+#  update_desktop_database: true,
+#)
 
 if build_machine.system() == 'windows' and get_option('buildtype') == 'release'
     meson.add_install_script('build-aux/windows-bundler.sh')

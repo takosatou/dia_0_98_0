@@ -12,7 +12,7 @@
 
 ldd ${MESON_INSTALL_DESTDIR_PREFIX}/bin/dia.exe | awk '{print $3}' | sort | uniq | sed 's#^/#/c/msys64/#' > depfiles
 echo /c/msys64/mingw64/lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll >> depfiles
-cat depfiles | xargs -I{} cp '{}' ${MESON_INSTALL_DESTDIR_PREFIX}/bin/
+grep '/mingw64/bin/' depfiles | xargs -I{} cp '{}' ${MESON_INSTALL_DESTDIR_PREFIX}/bin/
 
 mkdir ${MESON_INSTALL_DESTDIR_PREFIX}/share/glib-2.0
 cp -r /c/msys64/mingw64/share/glib-2.0/schemas ${MESON_INSTALL_DESTDIR_PREFIX}/share/glib-2.0/
