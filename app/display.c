@@ -146,6 +146,9 @@ initialize_display_widgets (DDisplay *ddisp)
   g_return_if_fail (dia && dia->filename);
 
   ddisp->im_context = gtk_im_multicontext_new ();
+  gtk_im_multicontext_set_context_id(
+    GTK_IM_MULTICONTEXT(ddisp->im_context), "gtk-im-context-none");
+  
   g_signal_connect (G_OBJECT (ddisp->im_context), "commit",
                     G_CALLBACK (ddisplay_im_context_commit), ddisp);
   ddisp->preedit_string = NULL;
