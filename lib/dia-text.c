@@ -1201,6 +1201,56 @@ text_delete_key_handler (Focus *focus, DiaObjectChange **change)
 }
 
 
+static int key101_mode = -1;
+
+static struct {
+  gunichar c101;
+  gunichar c106;
+} MY_KEYMAP[] = {
+  {'@', '"'},
+  {'"', '~'},
+  {'~', '`'},
+  {'`', '@'},
+
+  {'^', '&'},
+  {'&', '\''},
+  {'\'', '^'},
+
+  {'|', '_'},  
+  {'_', '='},  
+  {'=', ';'},  
+  {';', ':'},  
+  {':', '*'},  
+  {'*', '('},
+  {'(', ')'},
+};
+
+#include <windows.h>
+
+static gunichar my_convert_char(gunichar c) {
+  if (key101_mode == -1) {
+    char path[MAX_PATH];
+    DWORD len = GetModuleFileName(NULL, path, MAX_PATH);
+    if (len > 0 && strstr(path, "dia101.exe") != 0) {
+      key101_mode = 1;      
+    } else {
+      key101_mode = 0;
+    }
+  }
+
+  if (key101_mode == 1) {
+    return c;
+  }
+  
+  int i;
+  for (i = 0; i < sizeof(MY_KEYMAP)/sizeof(*MY_KEYMAP); i++) {
+    if (c == MY_KEYMAP[i].c101) {
+      return MY_KEYMAP[i].c106;
+    }
+  }
+  return c;
+}
+
 static int
 text_key_event (Focus            *focus,
                 guint             keystate,
@@ -1342,6 +1392,8 @@ text_key_event (Focus            *focus,
              utf = g_utf8_next_char (utf), strlen--) {
           DiaObjectChange *step;
           c = g_utf8_get_char (utf);
+
+	  c = my_convert_char(c);
 
           step = text_create_change (self,
                                      TYPE_INSERT_CHAR,
