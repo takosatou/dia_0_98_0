@@ -101,6 +101,7 @@ PropEnumData _uml_visibilities[] = {
   { N_("Public"), DIA_UML_PUBLIC },
   { N_("Private"), DIA_UML_PRIVATE },
   { N_("Protected"), DIA_UML_PROTECTED },
+  { N_("Package"), DIA_UML_PACKAGE },  
   { N_("Implementation"), DIA_UML_IMPLEMENTATION },
   { NULL, 0 }
 };

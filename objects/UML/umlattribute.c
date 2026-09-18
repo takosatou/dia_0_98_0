@@ -203,7 +203,7 @@ uml_attribute_write (AttributeNode  attr_node,
 /* Warning, the following *must* be strictly ASCII characters (or fix the
    following code for UTF-8 cleanliness */
 
-char visible_char[] = { '+', '-', '#', '~' };
+char visible_char[] = { '+', '-', '#', '~', ' ' };
 
 char *
 uml_attribute_get_string (UMLAttribute *attribute)

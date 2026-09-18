@@ -37,6 +37,7 @@ typedef enum /*< enum >*/ {
   DIA_UML_PUBLIC, /**< everyone can use it */
   DIA_UML_PRIVATE, /**< only accessible inside the class itself */
   DIA_UML_PROTECTED, /**< the class and its inheritants ca use this */
+  DIA_UML_PACKAGE, /**< package visibility */
   DIA_UML_IMPLEMENTATION /**< ?What's this? Means implementation decision */
 } DiaUmlVisibility;
 

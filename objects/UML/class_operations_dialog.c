@@ -924,6 +924,7 @@ operations_data_create_hbox (UMLClass *umlclass)
   dia_option_menu_add_item (DIA_OPTION_MENU (omenu), _("Public"), DIA_UML_PUBLIC);
   dia_option_menu_add_item (DIA_OPTION_MENU (omenu), _("Private"), DIA_UML_PRIVATE);
   dia_option_menu_add_item (DIA_OPTION_MENU (omenu), _("Protected"), DIA_UML_PROTECTED);
+  dia_option_menu_add_item (DIA_OPTION_MENU (omenu), _("Package"), DIA_UML_PACKAGE);
   dia_option_menu_add_item (DIA_OPTION_MENU (omenu), _("Implementation"), DIA_UML_IMPLEMENTATION);
 
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);

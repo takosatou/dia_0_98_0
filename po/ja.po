@@ -5342,7 +5342,7 @@ msgstr "protected"
 #: ../objects/UML/class_attributes_dialog.c:580
 #: ../objects/UML/class_operations_dialog.c:819 ../objects/UML/uml.c:106
 msgid "Implementation"
-msgstr "なし"
+msgstr "未定"
 
 #. end: Inheritance type
 #: ../objects/UML/class_attributes_dialog.c:592
